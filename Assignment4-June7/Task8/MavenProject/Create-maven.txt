@@ -1,0 +1,96 @@
+Microsoft Windows [Version 10.0.22631.3737]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DILEEP>java --version
+java 17.0.1 2021-10-19 LTS
+Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-LTS-39, mixed mode, sharing)
+
+C:\Users\DILEEP>mvn --version
+Apache Maven 3.9.7 (8b094c9513efc1b9ce2d952b3b9c8eaedaf8cbf0)
+Maven home: C:\apache-maven-3.9.7-bin\apache-maven-3.9.7
+Java version: 17.0.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-17.0.1
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+
+C:\Users\DILEEP>d:
+
+D:\>cd Boot Generator
+
+D:\Boot Generator>mvn archetype:generate -DgroupId=com.examples -DartifactId=MavenProject -DarchetypeArtifactId=maven-archetype-quickstart -Dinteractive=false
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] >>> archetype:3.2.1:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO]
+[INFO] <<< archetype:3.2.1:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO]
+[INFO]
+[INFO] --- archetype:3.2.1:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] Using property: groupId = com.examples
+[INFO] Using property: artifactId = MavenProject
+Define value for property 'version' 1.0-SNAPSHOT: :
+[INFO] Using property: package = com.examples
+Confirm properties configuration:
+groupId: com.examples
+artifactId: MavenProject
+version: 1.0-SNAPSHOT
+package: com.examples
+ Y: :
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: D:\Boot Generator
+[INFO] Parameter: package, Value: com.examples
+[INFO] Parameter: groupId, Value: com.examples
+[INFO] Parameter: artifactId, Value: MavenProject
+[INFO] Parameter: packageName, Value: com.examples
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: D:\Boot Generator\MavenProject
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.430 s
+[INFO] Finished at: 2024-06-12T21:04:55+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\Boot Generator>cd MavenProject
+
+D:\Boot Generator\MavenProject>mvn clean compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< com.examples:MavenProject >----------------------
+[INFO] Building MavenProject 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.2.0:clean (default-clean) @ MavenProject ---
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ MavenProject ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\Boot Generator\MavenProject\src\main\resources
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ MavenProject ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding windows-1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 1.8] to target\classes
+[WARNING] bootstrap class path not set in conjunction with -source 8
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.681 s
+[INFO] Finished at: 2024-06-12T21:07:30+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\Boot Generator\MavenProject>cd target
+
+D:\Boot Generator\MavenProject\target>cd classes
+
+D:\Boot Generator\MavenProject\target\classes>java com.examples.App
+Hello World!
+
+D:\Boot Generator\MavenProject\target\classes>
